@@ -6,7 +6,7 @@ function paramsSerializer(params) {
 }
 
 export const AXIOS = axios.create({
-  baseURL: `/api/v1`,
+  baseURL: `http://localhost:8080/api`,
   headers: {
     'Content-Type': 'application/json',
     Authorization: {

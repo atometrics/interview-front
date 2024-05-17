@@ -16,13 +16,7 @@ export default defineConfig({
   ],
   server: {
     https: true,
-    proxy: {
-      '/api': {
-        target: 'http://localhost:8080',
-        ws: true,
-        changeOrigin: true
-      }
-    }
+    port: 8081
   },
   resolve: {
     alias: {
