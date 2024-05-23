@@ -2,7 +2,7 @@
 <div id="home-view">
   <div class="teams">
     <div class="team human-team">
-      <div v-for="human in humanCharacters" class="character">
+      <div v-for="human in humanHeroes" class="hero">
         <div class="name">{{ human.name }}</div>
         <span class="material-symbols-outlined">swords</span> {{ human.strength }}
         <span class="material-symbols-outlined">cognition</span> {{ human.intelligence }}
@@ -11,7 +11,7 @@
     </div>
     <div class="vs"><img src="@/assets/images/vs.png" width="70"></div>
     <div class="team elven-team">
-      <div v-for="elf in elvenCharacters" class="character">
+      <div v-for="elf in elvenHeroes" class="hero">
         <div class="name">{{ elf.name }}</div>
         <span class="material-symbols-outlined">swords</span> {{ elf.strength }}
         <span class="material-symbols-outlined">cognition</span> {{ elf.intelligence }}
@@ -26,14 +26,14 @@
 </div>
 </template>
 <script>
-import { getCharacters } from '@/services/character.js'
+import { getHeroes } from '@/services/hero.js'
 import { RACES } from '@/models/races.js'
 
 export default {
   data() {
     return {
-      humanCharacters: [],
-      elvenCharacters: [],
+      humanHeroes: [],
+      elvenHeroes: [],
       battleResult: undefined
     }
   },
@@ -71,7 +71,7 @@ export default {
     align-items: center;
     gap: 10px;
     padding: 10px;
-    .character {
+    .hero {
       margin: 10px;
       padding: 10px;
       background: rgb(57, 57, 57);
